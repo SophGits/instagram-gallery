@@ -1,0 +1,1 @@
+node-sass --include-path scss src/styles/styles.scss dist/styles.css

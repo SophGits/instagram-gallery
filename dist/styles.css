@@ -1,0 +1,242 @@
+/* General */
+* {
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+h2 {
+  display: inline-block;
+  width: 140px;
+  font-size: 15px;
+  margin: 4px 0; }
+
+ul {
+  list-style-type: none;
+  padding: 0; }
+
+form {
+  margin: 0; }
+
+.filter-and-sort-display {
+  display: block;
+  background: #FFF;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  padding: 8px 0 0 10px;
+  /*position: fixed;*/
+  /*  top: 0;*/
+  /*left:0;*/
+  /*z-index: 2;*/ }
+
+.filter-and-sort-display p {
+  margin: 0; }
+
+a.sort-method {
+  display: inline-block; }
+
+input {
+  line-height: 20px;
+  margin: 10px 0;
+  display: inline-block; }
+
+.tag.filter,
+.user.filter,
+.video.sort {
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgray; }
+
+.display-filters p {
+  display: inline-block;
+  min-width: 260px; }
+  .display-filters p img {
+    position: relative;
+    top: 4px;
+    padding-right: 6px; }
+
+img[src*="icon"] {
+  max-width: 18px;
+  max-height: 18px; }
+
+ul.autocomplete {
+  margin: 0 10px;
+  max-width: 250px;
+  max-height: 200px;
+  overflow-y: scroll;
+  position: absolute;
+  left: 120px;
+  background: #FFF; }
+  ul.autocomplete.hide {
+    visibility: hidden; }
+  ul.autocomplete li {
+    border-bottom: 1px solid gray;
+    padding: 15px 25px; }
+
+ul li:hover {
+  background-color: aliceblue;
+  cursor: pointer; }
+
+/* Photo Box */
+.photo-box {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  border: 1px solid lightgray;
+  margin: 4px;
+  height: 495px;
+  width: 18.5%; }
+  .photo-box img {
+    width: 100%;
+    max-height: 265px;
+    cursor: pointer; }
+
+.tag-list {
+  max-height: 80px;
+  overflow-y: scroll; }
+
+.tag-list li:before {
+  content: '';
+  background: url("/images/tag-icon-grey.svg") no-repeat 50% 100%;
+  width: 12px;
+  height: 12px;
+  position: relative;
+  top: 4px;
+  padding-right: 6px;
+  display: inline-block;
+  background-size: contain; }
+
+p.username:before {
+  content: '';
+  background: url("/images/person-icon-grey.svg") no-repeat 50% 100%;
+  width: 25px;
+  height: 29px;
+  position: relative;
+  top: 8px;
+  padding-right: 6px;
+  display: inline-block;
+  background-size: contain; }
+
+p.created-time:before {
+  content: '';
+  background: url("/images/date-icon-grey.svg") no-repeat 50% 100%;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 4px;
+  padding-right: 6px;
+  display: inline-block;
+  background-size: contain; }
+
+p.likes-number:before {
+  content: '';
+  background-size: contain;
+  background: url("/images/heart-icon-grey.svg") no-repeat 50% 100%;
+  width: 19px;
+  height: 19px;
+  position: relative;
+  top: 4px;
+  padding-right: 6px;
+  display: inline-block; }
+
+p.media-type {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  color: purple; }
+
+.sort-method:before {
+  content: '';
+  background: url("/images/sort-icon.svg") no-repeat 50% 100%;
+  width: 22px;
+  height: 22px;
+  background-size: contain;
+  position: relative;
+  top: 2px;
+  margin-right: 10px;
+  display: inline-block; }
+
+.loadmore {
+  display: block;
+  margin: 20px auto 40px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #aaa; }
+
+.loadmore:hover {
+  cursor: pointer; }
+
+/* Lightbox */
+.lightbox-bg.hide {
+  display: none; }
+
+.lightbox-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center; }
+
+.lightbox:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; }
+
+.lightbox-photo {
+  padding: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  /*width: 500px;*/
+  width: 90%;
+  height: 98vh;
+  margin-top: 1vh;
+  border: 1px solid gray;
+  background-color: white;
+  position: relative; }
+
+.lightbox-photo .content {
+  margin: 0 auto;
+  width: 670px; }
+
+.lightbox-photo .close {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.lightbox-photo img,
+.lightbox-photo .previous,
+.lightbox-photo .next,
+.lightbox .close {
+  cursor: pointer; }
+
+.lightbox-photo .previous,
+.lightbox-photo .next {
+  position: absolute;
+  top: 50%; }
+
+.lightbox-photo .previous {
+  left: 0; }
+
+.lightbox-photo .next {
+  right: 0; }
+
+.lightbox-photo img {
+  display: block;
+  margin: 0 auto;
+  max-height: 99vh; }
+
+/* Map */
+#mapCanvas {
+  width: 90%;
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid blue; }
