@@ -1,11 +1,11 @@
-### Instagram-fuelled `Photo Hub`
+### Instagram-fuelled photo gallery
 Prototype app for displaying media from the Instagram API with custom filters and sorts.
 
 ##### Quickstart
-`npm start` to start the server
-`npm run build` to bundle the modules (and convert JSX into JS)
-`npm run watch-css` to keep an eye on the CSS
-Requires Instagram access token and mongo db.
+*`npm start` to start the server
+*`npm run build` to bundle the modules (and convert JSX into JS)
+*`npm run watch-css` to keep an eye on the CSS
+*Requires Instagram access token and mongo db.
 
 ##### Todo
 * Sorting by something invalid, such as `sort_by=likes_count` instead of just `likes` the default behaviour results and there is no error warning.
